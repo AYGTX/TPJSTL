@@ -1,8 +1,3 @@
-<%-- 
-    Document   : afficherclient
-    Created on : Nov 5, 2020, 1:08:11 PM
-    Author     : wael
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
