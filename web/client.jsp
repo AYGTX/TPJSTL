@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,12 +21,13 @@
                     <p class="erreur"> ${message}</p>
                     <label for="nomClient">Nom <span
                             class="requis">*</span></label>
-                    <input type="text" id="nomClient" value="Hamadi"
+                    <input type="text" id="nomClient" 
                            name="nomClient" value="" size="20" maxlength="20" />
                     <br />
                     <label for="prenomClient">Prénom </label>
                     <input type="text" id="prenomClient" value="Aymen"
                            name="prenomClient" value="" size="20" maxlength="20" />
+
                     <br />
                     <label for="adresseClient">Adresse de livraison<span class="requis">*</span></label>
                     <input type="text" id="adresseClient" name="adresseClient" value="" size="20" maxlength="20" />
@@ -40,14 +40,14 @@
                     <input type="email" id="emailClient" name="emailClient" value="a@aymen.a" size="20" maxlength="60" />
                     <br/>
                 </fieldset>
-                                <input type="submit" value="Valider" />
-            <input type="reset" value="Remettre à zéro" /> <br/>
+                <input type="submit" value="Valider" />
+                <input type="reset" value="Remettre à zéro" /> <br/>
             </form>
         </div>     
-        <h2> Nom client = ${client.nom}</h2>
-        <h2> Prénom client = ${client.prenom}</h2>
-        <h2> Adresse client = ${client.adresse}</h2>
-        <h2> Telephone client = ${client.telephone} </h2>
-        <h2> Email client = ${client.email}</h2>
-    </body>
+    <c:if test="${ empty client.nom}">  <h2> Nom client = ${client.nom}</h2></c:if>
+    <c:if test="${ empty client.prenom}">  <h2> Prénom client = ${client.prenom}</h2><h2> Nom client = ${client.prenom}</h2></c:if>
+    <c:if test="${ empty client.adresse}">  <h2> Adresse client = ${client.adresse}</h2></c:if>
+    <c:if test="${ empty client.telephone}"> <h2> Telephone client = ${client.telephone} </h2></c:if>
+    <c:if test="${ empty client.email}"> <h2> Email client = ${client.email}</h2></c:if>
+</body>
 </html>

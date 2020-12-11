@@ -43,11 +43,10 @@
             <input type="submit" value="Valider" />
             <input type="reset" value="Remettre à zéro" /> <br/>
         </form>
-        <c:if var="${client.montant eq '  '}"> test </c:if>
-    <c:if ${client.montant}!=null > <h2> Montant = ${client.montant}</h2></c:if>
-    <h2> Mode Paiment = ${client.modep}</h2>
-    <h2> Status P= ${client.statusp}</h2>
-    <h2> Status Livraison = ${client.statusl} </h2>
-    <h2> Date = ${client.date}</h2>
-</body>
+        <h2> Montant = ${client.montant}</h2>
+        <h2> Mode Paiement = ${client.modep}</h2>
+        <h2> Status P= ${client.statusp}</h2>
+        <h2> Status Livraison = ${client.statusl} </h2>
+        <h2> Date = ${client.date}</h2>
+    </body>
 </html>
